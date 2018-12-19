@@ -1,4 +1,4 @@
-package com.aleksdark.weatherapp.mvp
+package com.aleksdark.weatherapp.presentation.mvp
 
 abstract class PresenterBase<T : MvpView> : MvpPresenter<T> {
 

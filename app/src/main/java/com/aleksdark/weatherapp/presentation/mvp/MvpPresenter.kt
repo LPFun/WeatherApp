@@ -1,4 +1,4 @@
-package com.aleksdark.weatherapp.mvp
+package com.aleksdark.weatherapp.presentation.mvp
 
 interface MvpPresenter<V : MvpView> {
     fun attachView(mvpView:V)
