@@ -7,21 +7,21 @@ import android.view.View
 import android.view.ViewGroup
 import com.aleksdark.weatherapp.R
 import com.aleksdark.weatherapp.inflate
+import com.aleksdark.weatherapp.repostory.model.Current
+import com.aleksdark.weatherapp.repostory.model.Weather
 import kotlinx.android.synthetic.main.fragment_city_weather.*
 
 class CityWeatherView : Fragment(), Contract.View {
 
-    var longitude : String? = null
-    var latitude : String? = null
+
+    var city : String? = null
     lateinit var mPresenter: CityWeatherPresenter
 
     companion object {
-        val LAT = "LAT"
-        val LON = "LON"
-        fun newInstance(latitude: String?, longituge: String?): Fragment {
+        val CITY = "LAT"
+        fun newInstance(city: String): Fragment {
             val bundle = Bundle()
-            bundle.putString(LAT, latitude)
-            bundle.putString(LON, longituge)
+            bundle.putString(CITY, city)
             val cityWeatherFragment = CityWeatherView()
             cityWeatherFragment.arguments = bundle
             return cityWeatherFragment
@@ -33,10 +33,9 @@ class CityWeatherView : Fragment(), Contract.View {
         mPresenter = CityWeatherPresenter()
         val bundle = arguments
         bundle?.let {
-            longitude = bundle.getString(LON)
-            latitude = bundle.getString(LAT)
+            city = bundle.getString(CITY)
         }
-        mPresenter.onArgsIsLoaded(latitude, longitude)
+        mPresenter.onArgsIsLoaded(city!!)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -47,7 +46,14 @@ class CityWeatherView : Fragment(), Contract.View {
         super.onViewCreated(view, savedInstanceState)
         mPresenter.attachView(this)
         mPresenter.viewIReady()
-        textView.text = latitude+longitude
+    }
+
+    override fun showCurrentWeather(weather: Weather) {
+        weather_city.text = weather.location!!.name
+        weather_humidity.text = weather.current!!.humidity.toString()
+        weather_temp.text = weather.current!!.tempC.toString()
+        weather_wind.text = weather.current!!.windKph.toString()
+        weather_description.text = weather.current!!.condition!!.text
     }
 
 }

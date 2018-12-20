@@ -6,6 +6,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface WService {
-    @GET("/current.json")
+    @GET("current.json")
     fun  getCurrentWeather(@Query("key") key:String, @Query("q") q:String, @Query("lang") lang:String) : Call<Weather>
 }
