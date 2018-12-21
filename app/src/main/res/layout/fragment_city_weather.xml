@@ -1,53 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-        android:orientation="vertical"
+<FrameLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/adf"
+        android:id="@+id/weather_lay"
         >
 
-    <TextView
-            tools:text="City"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/weather_city"
-            app:layout_constraintStart_toStartOf="parent"
-            />
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        <TextView
+                tools:text="City"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weather_city"
+                app:layout_constraintStart_toStartOf="parent"
+                />
 
-    <TextView
-            tools:text="Temperature"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/weather_temp"
-            app:layout_constraintTop_toBottomOf="@+id/weather_city"
-            />
-    <TextView
-            tools:text="Wind"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/weather_wind"
-            app:layout_constraintTop_toBottomOf="@+id/weather_city"
-            />
-    <TextView
-            tools:text="Humidity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/weather_humidity"
-            app:layout_constraintTop_toBottomOf="@+id/weather_city"
-            />
-    <TextView
-            tools:text="Description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/weather_description"
-            app:layout_constraintTop_toBottomOf="@+id/weather_city"
-            />
-    <ImageView
-            android:id="@+id/weather_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-</LinearLayout>
+        <TextView
+                tools:text="Temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weather_temp"
+                app:layout_constraintTop_toBottomOf="@+id/weather_city"
+                />
+
+        <TextView
+                tools:text="Wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weather_wind"
+                app:layout_constraintTop_toBottomOf="@+id/weather_city"
+                />
+
+        <TextView
+                tools:text="Humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/weather_humidity"
+                app:layout_constraintTop_toBottomOf="@+id/weather_city"
+                />
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+            <TextView
+                    tools:text="Description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/weather_description"
+                    app:layout_constraintTop_toBottomOf="@+id/weather_city"
+                    />
+
+            <ImageView
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/weather_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/weather_error_lay"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        <TextView
+                android:id="@+id/weather_error_txt"
+                tools:text="Error"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+    </FrameLayout>
+
+</FrameLayout>

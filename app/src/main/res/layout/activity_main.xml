@@ -30,7 +30,7 @@
                     android:textSize="12dp"
                     android:textColor="@android:color/white"
                     android:drawableTop="@drawable/ic_france"
-                    android:text="Париж"
+                    android:text="Paris"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     />
@@ -41,7 +41,7 @@
                     android:textSize="12dp"
                     android:textColor="@android:color/white"
                     android:drawableTop="@drawable/ic_usa"
-                    android:text="Нью-Йорк"
+                    android:text="New York"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     />
@@ -52,7 +52,7 @@
                     android:textSize="12dp"
                     android:textColor="@android:color/white"
                     android:drawableTop="@drawable/ic_current"
-                    android:text="Текущий"
+                    android:text="Current"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     />
@@ -63,7 +63,7 @@
                     android:textSize="12dp"
                     android:textColor="@android:color/white"
                     android:drawableTop="@drawable/ic_englad"
-                    android:text="Лондон"
+                    android:text="London"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     />
@@ -74,7 +74,7 @@
                     android:textSize="12dp"
                     android:textColor="@android:color/white"
                     android:drawableTop="@drawable/ic_japan"
-                    android:text="Япония"
+                    android:text="Tokyo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     />

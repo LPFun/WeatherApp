@@ -1,4 +1,4 @@
-package com.aleksdark.weatherapp.repostory.model
+package com.aleksdark.weatherapp.repostory.model.weather
 
 
 import com.google.gson.annotations.Expose
