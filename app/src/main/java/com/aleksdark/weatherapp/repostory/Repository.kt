@@ -45,7 +45,6 @@ class Repository {
                     } else{
                         failed("No Internet")
                     }
-
                 }
 
                 override fun onFailure(call: Call<GeoIpResponseModel>, t: Throwable) {
