@@ -1,2 +1,2 @@
 # WeatherApp
-Kotlin, lambda, mvp
+Kotlin, lambda, mvp, retrofit
